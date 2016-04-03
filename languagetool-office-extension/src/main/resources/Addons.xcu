@@ -54,6 +54,7 @@
                     <value xml:lang="uk">Перевiрка граматики</value>
                     <value xml:lang="is">Lesa yfir texta</value>
                     <value xml:lang="da">Kontrollere tekst</value>
+					<value xml:lang="no">Kontrollér tekst</value>
                     <value xml:lang="gl">Comprobar o texto</value>
                     <value xml:lang="pt">Verificar o texto</value>
                     <value xml:lang="es">Revisar el texto</value>
@@ -90,6 +91,7 @@
                     <value xml:lang="uk">Перевірити документ</value>
                     <value xml:lang="is">Lesa aftur yfir</value>
                     <value xml:lang="da">Kontroller dokumentet</value>
+					<value xml:lang="no">Kontrollér dokumentet</value>
                     <value xml:lang="gl">Volver comprobar o texto</value>
 					<value xml:lang="pt">Voltar a verificar o texto</value>
                     <value xml:lang="es">Volver a revisar el texto</value>
