@@ -1,8 +1,6 @@
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%                                                                     %
-%  This branch is for adding Norwegian to LanguageTool. Stay tuned!   %
-%                                                                     %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+----------------------------------------------------------------
+This branch is for adding Norwegian to LanguageTool. Stay tuned!
+----------------------------------------------------------------
 
 LanguageTool is an Open Source proofreading software for English, French, German,
 Polish, Russian, and [more than 20 other languages](https://languagetool.org/languages/).
