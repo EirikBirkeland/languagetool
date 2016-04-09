@@ -5,7 +5,7 @@
 <formathandle type="end" include="yes"></formathandle>
 <formathandle type="isolated" include="no"></formathandle>
 <okpsrx:options oneSegmentIncludesAll="no" trimLeadingWhitespaces="no" trimTrailingWhitespaces="no" useJavaRegex="yes" treatIsolatedCodesAsWhitespace="no"></okpsrx:options>
-<okpsrx:sample language="pl_two" useMappedRules="yes">Dette er f.eks. en setning. Dette er f.eks. en setning.</okpsrx:sample>
+<okpsrx:sample language="pl_two" useMappedRules="no">Dette er f.eks. en setning. Dette er f.eks. en setning.</okpsrx:sample>
 <okpsrx:rangeRule></okpsrx:rangeRule>
 </header>
 <body>
@@ -5597,12 +5597,8 @@
 </languagerule>
 <languagerule languagerulename="Norwegian">
 <rule break="no">
-<beforebreak>f\.</beforebreak>
-<afterbreak>eks\.</afterbreak>
-</rule>
-<rule break="no">
-<beforebreak>f\.eks\.</beforebreak>
-<afterbreak>\s</afterbreak>
+<beforebreak>f\.eks\.\s</beforebreak>
+<afterbreak>\p{L}</afterbreak>
 </rule>
 <rule break="yes">
 <beforebreak>[\.!?…][\u00BB\u2019\u201D\u203A"'\p{Pe}\u0002¹²³]*\s</beforebreak>
