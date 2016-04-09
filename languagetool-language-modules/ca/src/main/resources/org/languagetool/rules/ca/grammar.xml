@@ -51,7 +51,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
     <!ENTITY mesos_any_maj "Gener|Febrer|Març|Abril|Maig|Juny|Juliol|Agost|Setembre|Octubre|Novembre|Desembre">
     <!ENTITY mots_femenins_apostrofen "hidra|hifa|hulla|ulna|umbra|una|ungla|unça|umma|upa|urbs|urca|urna|urpa|idus|illa|inca|iva|URSS|UJI|(?-i)ICONA|ICS|Ingrid|IRA|Imma|UCI|UCE|ISO|UVI">
     <!ENTITY mots_HAC_ASPIRADA2 "Higgs|high|Hildesheim|Hill|hijabs?|Hillary|Himmler|hip-hop|hippies|hippy|hipsters?|Hirado|His|Hubei|Hudson|Hunter|Husserl|Huygens|Utah|husky">
-    <!ENTITY mots_HAC_ASPIRADA "Haarlem|haendel.*|händel.*|habermas.*|hadits?|Hanuk?kà|hack.*|Harlem|Hartford|Haifa|haikus?|haima|haimes|halal|halar|hall.*|Halloweens?|Hamada|Hamas|Hamàs|hamilton.*|Hamlet.*|hammams?|Hammond|Hampton|handicaps?|Hannover|Hanoi|Hans|Hansa|hardware|harolds?|Harrison|harrods?|harry|Hartmann?|Haruki|Harvard|Harz|hash.*|Havel|Havilland|hawai.*|hawk.*|Haydn.*|Hayworth|Heard|hearst|Heathrow|heav.*|hegel.*|Heidelberg|Heide[gn].*|Heilig.*|hein.*|Heisen.*|Heitz|Helen|Heming.*|henna|hennes|Henry|Hepburn|herbert.*|Herder|Hereford|Hesse|Hessen|Hewlett.*|Hezboll.+|high.*|hilbert.*|Hilda|hinden.*|hinterlands?|Hitch.*|hitler.*|hobbes.*|hobby|hobbies|Hohen.*|holdings?|hollywood.*|Holmes.*|Holstein|Hong|hongk.+|Honolu.+|Honsh[uū]|h[òo]bbits?|hooligan.*|hoover.*|hopkins|Hork.*|horst|H[ou]f.*|Houston|Howard|hubs?|Hubble|humbold.*|Hume|hunting.*|husseinit.+">
+    <!ENTITY mots_HAC_ASPIRADA "Haddock|Haarle[mn].*|Hainan|haendel.*|händel.*|habermas.*|hadits?|Hanuk?kà|hack.*|Harlem|Hartford|Haifa|haikus?|haima|haimes|Haikou|halal|halar|Halifax|Halmstad|hall.*|Halloweens?|Hamada|Hamadan|Hamas|Hamàs|hamilton.*|Hamlet.*|hammams?|Hammond|Hampton|handicaps?|Hangzhou|Hannover|Hanoi|Hans|Hansa|Harbin|hardware|harolds?|Harrisburg|Harrison|harrods?|harry|Hartley|Hartmann?|Hartree|Haruki|Harvard|Harz|hash.*|Hastings|Havel|Havilland|hawai.*|hawk.*|Hayek|Haydn.*|Hayworth|Heard|hearst|Heathrow|heav.*|hegel.*|Hebei|Hedmark|Heerenveen|Heerlen|Hefei|Heidelberg|Heide[gn].*|Heilbronn|Heilongjiang|Heilig.*|hein.*|Heisen.*|Heitz|Helmand|Helen|Helsingborg|Heming.*|Henan|henna|hennes|Henry|Hepburn|herbert.*|Herder|Hereford|Herford|Herning|Hertfordshire|Hesse|Hessen|Hewlett.*|Hezboll.+|high.*|hilbert.*|Hilda|Hillingdon|hinden.*|hinterlands?|Hitch.*|hitler.*|Hilversum|Hobart|Hockenheim|Hodeida|Hohhot|Hokkaido|hobbes.*|hobby|hobbies|Hohen.*|holdings?|hollywood.*|Holmes.*|Holstein|Hong|hongk.+|Honolu.+|Honsh[uū]|h[òo]bbits?|hooligan.*|hoover.*|hopkins|Hork.*|horst|H[ou]f.*|Houla|Houston|Howard|Hoyerswerda|Hunan|Hunedoara|huskys?|huskies|hubs?|Hubble|humbold.*|Hume|hunting.*|husseinit.+|(?-i)Hagen">
     <!ENTITY mots_SOTA "direcció|supervisió|batuta|guia|pseudònim|protecció|tutela|denominació|jurisdicció|nom|títol|domini|dominació|patronatge">
     <!ENTITY nombres_que_apostrofen "(1{1,2}|11[.\s]?\d{3}|1{1,2}\.\d{3}\.\d{3}|1{1,2}\s\d{3}\s\d{3}|1{1,2}\d{6})([,]\d+)?([&#37;&#8240;&#8241;′″]|&#176;[CFKNSEW]?)?|11[aèé]|11\.[0-5]\d">
     <!ENTITY noms_ABAIXAR_APUJAR "calefacció|impost|sou|salari|guàrdia|vela|persiana|cap|braç|veu|to|preu|pressupost|ràdio|volum|tele|televisió|música|teló|vista">
@@ -996,6 +996,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>1 concert per a violí</example>
                 <example>1/24 part d'unitat</example>
             </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">el|l</token>
+                    <token regexp="yes">[0-9,. ]+<exception regexp="yes">[.,1]</exception></token>
+                    <token regexp="yes">(?-i)[kmc]?[mg]|graus</token>
+                </pattern>
+                <message>Possible error de concordança</message>
+                <suggestion>\1s \2 \3</suggestion>
+                <example correction="els 70 mm">En <marker>el 70 mm</marker>.</example>
+            </rule>
         </rulegroup>
         <rulegroup id="CONCORDANCES_PRONOM_NEUTRE" name="concordances amb pronom neutre">
             <rule>
@@ -1628,6 +1638,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction=""><marker>uns tres</marker> o quatre xiquetes</example>
                 <example correction=""><marker>un mitjans</marker> públics.</example>
                 <example correction=""><marker>un alts</marker> càrrecs públics.</example>
+                <example correction="">En <marker>el 40</marker> graus.</example>
+                <example correction="">Cap a<marker>l 40</marker> graus.</example>
                 <example>Uns alts càrrecs públics.</example>
                 <example>El bel canto.</example>
                 <example>Els metges pacients.</example>
@@ -1787,6 +1799,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <message>Error de concordança.</message>
                 <short>Error de concordança</short>
                 <example correction=""><marker>El tres homes</marker>.</example>
+                <example correction=""><marker>El 70 mm</marker> anuals.</example>
                 <example>Els tres homes.</example>
                 <example>va ser vassall seu tres anys</example>
                 <example>al nou model polític</example>
@@ -9344,6 +9357,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rule>
     </category>
     <category id="CONFUSIONS" name="Z1) Confusions" type="grammar">
+        <rule id="PODER_NO_PODER_HO" name="*poder-no/poder-ho">
+            <pattern>
+                <token postag="V.[NGM].*" postag_regexp="yes"></token>
+                <token spacebefore="no">-</token>
+                <token spacebefore="no">no</token>
+            </pattern>
+            <message>¿Volíeu dir <suggestion>\1-ho</suggestion>?</message>
+            <example correction="poder-ho">No <marker>poder-no</marker> fer.</example>
+        </rule>
         <rule id="PEL_QUE_FA_EL" name="pel que fa *el/al">
             <antipattern>
                 <marker>
@@ -15047,7 +15069,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <rule>
                 <pattern>
                     <token>de</token>
-                    <token regexp="yes">h?[aeiouàèéíòóú].*<exception regexp="yes">h?[ui][aeioàèéóòu].*|hosts?|el|els|&noms_lletres;|iure|&mots_HAC_ASPIRADA;|&mots_HAC_ASPIRADA2;</exception><exception postag="AO.*|hac_aspirada|mot_foraster|UNKNOWN|V.[MSI].*|NP..000" postag_regexp="yes"/></token>
+                    <token regexp="yes">h?[aeiouàèéíòóú].*<exception regexp="yes">h?[ui][aeioàèéóòu].*|hosts?|el|els|&noms_lletres;|iure|&mots_HAC_ASPIRADA;|&mots_HAC_ASPIRADA2;|oro</exception><exception postag="AO.*|hac_aspirada|mot_foraster|UNKNOWN|V.[MSI].*|NP..000" postag_regexp="yes"/></token>
                 </pattern>
                 <message>Cal apostrofar.</message>
                 <suggestion>d'<match no="2"></match></suggestion>
@@ -15058,6 +15080,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>de atletismo</example>
                 <example>de Iugoslàvia</example>
                 <example>el 23 de agosto de 1984</example>
+                <example>de oro</example> <!-- very common in Spanish-->
                 <!-- gira al voltant de OH
                     de ARN-->
             </rule>
@@ -20448,6 +20471,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <marker>
                         <token regexp="yes">es|se|s'<exception postag="_possible_nompropi"></exception></token>
                     </marker>
+                    <token min="0" postag_regexp="yes" postag="&pronom_feble;"/>
                     <token postag="V...[12][SP]0.?" postag_regexp="yes"><exception  postag="V...3[SP]0.?" postag_regexp="yes"/></token>
                 </pattern>
                 <message>Error de concordança.</message>
@@ -20457,6 +20481,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction="Ens|Us"><marker>Es</marker> podem posar.</example>
                 <example correction="Ens|Us"><marker>Es</marker> penso dir jo.</example>
                 <example correction="Ens|Us"><marker>Es</marker> feu per la via correcta.</example>
+                <example correction="ens|us">que <marker>se</marker> n'ocupem.</example>
                 <example>Es féu per la via correcta.</example>
                 <example>es pot fer correctament</example>
             </rule>

@@ -3,12 +3,15 @@
 ## 3.4 (release planned for 2016-06-27)
 
 #### English
-  * added about 7 confusion pairs like throe/throw, raps/wraps (works only with ngram data,
+  * added about 11 confusion pairs like throe/throw, raps/wraps (works only with ngram data,
     see http://wiki.languagetool.org/finding-errors-using-n-gram-data) 
 
 #### French
   * added 32 confusion pairs like pris/prix, quand/quant (works only with ngram data,
     see http://wiki.languagetool.org/finding-errors-using-n-gram-data) 
+
+#### German
+  * added some rules
 
 #### Spanish
   * added 14 confusion pairs like tubo/tuvo, ciento/siento (works only with ngram data,
