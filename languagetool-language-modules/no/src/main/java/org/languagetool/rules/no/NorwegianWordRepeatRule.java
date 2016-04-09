@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301
  * USA
  */
-package org.languagetool.rules.en;
+package org.languagetool.rules.no;
 
 import java.util.ResourceBundle;
 
@@ -28,7 +28,7 @@ import org.languagetool.rules.WordRepeatRule;
 /**
  * Word repeat rule for English, to avoid false alarms in the generic word repetition rule.
  */
-public class EnglishWordRepeatRule extends WordRepeatRule {
+public class NorwegianWordRepeatRule extends WordRepeatRule {
 
   public NorwegianWordRepeatRule(final ResourceBundle messages, final Language language) {
     super(messages, language);

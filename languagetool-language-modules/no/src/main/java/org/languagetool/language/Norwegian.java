@@ -30,6 +30,7 @@ import org.languagetool.chunking.Chunker;
 import org.languagetool.languagemodel.LanguageModel;
 import org.languagetool.languagemodel.LuceneLanguageModel;
 import org.languagetool.rules.*;
+import org.languagetool.rules.no.*;
 import org.languagetool.synthesis.Synthesizer;
 import org.languagetool.tagging.Tagger;
 import org.languagetool.tagging.disambiguation.Disambiguator;
@@ -41,6 +42,16 @@ import org.languagetool.tokenizers.WordTokenizer;
 public class Norwegian extends Language {
 
   private LuceneLanguageModel languageModel;
+
+  private SentenceTokenizer sentenceTokenizer;
+  
+  @Override
+  public SentenceTokenizer getSentenceTokenizer() {
+    if (sentenceTokenizer == null) {
+      sentenceTokenizer = new SRXSentenceTokenizer(this);
+    }
+    return sentenceTokenizer;
+  }
 
   @Override
   public String getName() {
@@ -82,7 +93,8 @@ public class Norwegian extends Language {
                 Example.fixed("This house is old. <marker>It</marker> was built in 1950.")),
         new MultipleWhitespaceRule(messages, this),
         new LongSentenceRule(messages),
-        new SentenceWhitespaceRule(messages)
+        new SentenceWhitespaceRule(messages),
+        new NorwegianWordRepeatRule(messages, this)
     );
   }
 }
