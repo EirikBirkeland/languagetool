@@ -1,4 +1,4 @@
-This branch is for adding Norwegian to LanguageTool. Stay tuned!
+This fork is for adding Norwegian to LanguageTool. Stay tuned!
 ----------------------------------------------------------------
 
 LanguageTool is an Open Source proofreading software for English, French, German,
