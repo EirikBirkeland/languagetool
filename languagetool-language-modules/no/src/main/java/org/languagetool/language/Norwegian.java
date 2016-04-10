@@ -45,7 +45,7 @@ public class Norwegian extends Language {
 
   private SentenceTokenizer sentenceTokenizer;
   
-  @Override
+  @Override // OK
   public SentenceTokenizer getSentenceTokenizer() {
     if (sentenceTokenizer == null) {
       sentenceTokenizer = new SRXSentenceTokenizer(this);
