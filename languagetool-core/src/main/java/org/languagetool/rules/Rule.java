@@ -64,6 +64,11 @@ public abstract class Rule {
    */
   public Rule(ResourceBundle messages) {
     this.messages = messages;
+    if (messages != null) {
+      setCategory(Categories.MISC.getCategory(messages));  // the default, sub classes may overwrite this
+    } else {
+      setCategory(new Category(CategoryIds.MISC, "Misc"));
+    }
   }
 
   /**
@@ -211,13 +216,15 @@ public abstract class Rule {
     return Collections.unmodifiableList(incorrectExamples);
   }
 
+  /**
+   * @return a category (never null since LT 3.4)
+   */
   public final Category getCategory() {
     return category;
   }
 
   public final void setCategory(Category category) {
-    Objects.requireNonNull(category, "category cannot be null");
-    this.category = category;
+    this.category = Objects.requireNonNull(category, "category cannot be null");
   }
 
   protected final RuleMatch[] toRuleMatchArray(List<RuleMatch> ruleMatches) {

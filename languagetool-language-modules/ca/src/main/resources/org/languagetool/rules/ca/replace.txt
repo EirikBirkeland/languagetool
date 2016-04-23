@@ -1006,6 +1006,8 @@ enterado=conformitat
 entonces|entonses=aleshores|llavors
 envoltori|emboltori=embolcall|bolic|farcell
 envoltoris|emboltoris=embolcalls|bolics|farcells
+escaparatista=aparadorista
+escaparatistes=aparadoristes
 espaitemporal=espaciotemporal
 espaitemporals=espaciotemporals
 event=esdeveniment|acte
@@ -1381,6 +1383,8 @@ molguts=mòlts
 molguda=mòlta
 molgudes=mòltes
 molturació=mòlta|molinada
+monasteri=monestir
+monasteris=monestirs
 monitorització=monitoratge
 monitoritzacions=monitoratges
 monòcul=monocle
@@ -2041,3 +2045,8 @@ colteu=escolteu
 # Unnecessary if the proper name is removed from the tagger dictionary
 menera=manera|Menera
 turró=torró
+# errors in tagger dictionary
+gobern=govern
+goberna=governa
+Gobern=Govern
+Goberna=Governa

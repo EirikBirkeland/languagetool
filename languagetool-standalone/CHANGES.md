@@ -2,15 +2,27 @@
 
 ## 3.4 (release planned for 2016-06-27)
 
+#### Catalan
+  * added and improved rules
+  * added words suggested by users
+ 
 #### English
-  * added about 11 confusion pairs like throe/throw, raps/wraps (works only with ngram data,
+  * added about 21 confusion pairs like throe/throw, raps/wraps (works only with ngram data,
     see http://wiki.languagetool.org/finding-errors-using-n-gram-data) 
 
 #### French
+  * upgraded dictionaries to Dicollecte-5.6
   * added 32 confusion pairs like pris/prix, quand/quant (works only with ngram data,
     see http://wiki.languagetool.org/finding-errors-using-n-gram-data) 
 
 #### German
+  * added some rules
+  
+#### Polish
+  * added and improved rules
+  * removed some false alarms
+  
+#### Portuguese
   * added some rules
 
 #### Spanish
@@ -19,14 +31,19 @@
 
 #### Java API
   * some formerly deprecated code has been removed
+  * all rules have now a category ("Misc" if the rule doesn't specify a category)
+  * a new module `languagetool-http-client` has been added with a class
+    `RemoteLanguageTool` that you can use to query a remote LanguageTool server
+    via HTTP or HTTPS
 
 #### Embedded HTTPS server
   * changed behaviour for OutOfMemory situations: the server
     process now stops instead of being in an unstable state
   * missing parameters (like `text`) now cause a `400 Bad Request`
     response (it used to produce `500 Internal Server Error`)
-
-
+  * to turn on language auto-detection, `autodetect=yes` can now be
+    used instead of `autodetect=1` (to be consistent with `enabledOnly=yes`)
+ 
 
 ## 3.3 (2016-03-28)
 

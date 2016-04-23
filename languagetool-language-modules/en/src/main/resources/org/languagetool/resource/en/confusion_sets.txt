@@ -18,6 +18,7 @@
 # is used whose pair comes first in this file.
 
 able; bale; 1000000000;                                                           # p=1.000, r=0.966, 975+15, 3grams, 2016-04-06
+abstruse|difficult to penetrate;obtuse|between 90 and 180 degrees;10000000        # p=0.995, r=0.144, 343+1000, 3grams, 2016-04-19
 accede|give in, bow;exceed|surpass;10000000                                       # p=0.996, r=0.558, 1000+1000, 3grams, 2016-02-27
 accept|to agree, to endure; except|with the exception of; 100000                  # p=0.997, r=0.792, 1900, 3grams, 2015-08-12
 accessed|got, retrieved;assessed|evaluated;100                                    # p=0.998, r=0.965, 1000+1000, 3grams, 2016-02-27
@@ -29,7 +30,10 @@ adds|makes an addition;ads|advertisements;10000000                              
 advice|noun; advise|verb; 100000                                                  # p=0.998, r=0.792, 1647, 3grams, 2015-08-12
 affect|experience of emotion; effect|outcome, result; 10000000                    # p=0.982, r=0.595, 1805, 3grams, 2015-08-12
 affects|experiences of emotion;effects|outcomes, results;10000000                 # p=0.993, r=0.681, 363+1000, 3grams, 2015-12-10
+affluence|richness;effluence|outflow;10000000                                     # p=0.995, r=0.400, 1000+56, 3grams, 2016-04-19
+aisle|long narrow passage;isle|small island;10000000                              # p=0.995, r=0.282, 1000+994, 3grams, 2016-04-19
 #aids|helps, gives assistance;aides|plural of 'aide' = assistant;100              # p=0.992, r=0.775, 386+80, 3grams, 2015-12-10 -- would need to be case-sensitive b/c 'AIDS'
+alliterate|exhibit alliteration;illiterate|person unable to read;10000000         # p=0.996, r=0.736, 35+1000, 3grams, 2016-04-19
 allowed|permitted; aloud|using the voice; 10000                                   # p=0.999, r=0.895, 1056, 3grams, 2015-08-12
 allude|make a disguised reference to;elude|escape;10000000                        # p=0.995, r=0.578, 1000+1000, 3grams, 2016-02-27
 allusion|passing reference; illusion|an erroneous mental representation; 1000     # p=0.994, r=0.796, 211, 3grams, 2015-08-12
@@ -39,6 +43,7 @@ and; end; 1000000000000                                                         
 anecdote|short story;antidote|substance which can counteract poisoning;10000000   # p=0.994, r=0.175, 1000+998, 3grams, 2016-02-27
 anti|against;auntie|aunt;10000000                                                 # p=0.992, r=0.433, 991+999, 3grams, 2016-02-27
 appraise|evaluate, value;apprise|advise, notify;10000000                          # p=1.000, r=0.108, 380+102, 3grams, 2016-02-27
+arrant|complete, thorough;errant|straying from the right course;100000            # p=0.993, r=0.527, 113+999, 3grams, 2016-04-19
 ascent|rise, climb;assent|agreement;10000000                                      # p=0.997, r=0.383, 1000+1000, 3grams, 2016-02-27
 at; as; 1000000                                                                   # p=1.000, r=0.317, 2000, 3grams, 2015-10-07
 ate|past of 'to eat'; eight|the number '8'; 100                                   # p=0.996, r=0.938, 1658, 3grams, 2015-08-12
@@ -137,6 +142,7 @@ crews|plural of 'crew' = persons who man a vehicle;cruise|an ocean trip;10000   
 dairy|business processing animal milk;diary|a daily written record;100000         # p=0.997, r=0.717, 193+341, 3grams, 2015-12-10
 dam|constructed barrier;damn|expletive;10000                                      # p=1.000, r=0.694, 412+130, 3grams, 2015-12-10
 dear|address at the beginning of a letter;deer|animal;10000                       # p=0.999, r=0.559, 992+277, 3grams, 2015-12-10
+decent|nice, correct; descent|downward movement, origin; 1000;                    # p=0.999, r=0.893, 145+605, 3grams, 2016-04-11
 deducible|capable of being deduced;deductible|acceptable as a tax deduction;10000000  # p=0.993, r=0.681, 83+1000, 3grams, 2016-02-27
 desert|arid land; dessert|last course of a meal; 1000000                          # p=0.996, r=0.491, 1036, 3grams, 2015-08-12
 deviate|noun or adjective;deviant|noun, adjective, or verb;10000000               # p=0.998, r=0.442, 1000+1000, 3grams, 2016-02-27
@@ -179,6 +185,7 @@ ferrate|inorganic anion;ferret|a mammal similar to a weasel;100000              
 feted|celebrated;fetid|foul, smelly;100000                                        # p=1.000, r=0.526, 447+224, 3grams, 2016-02-27
 fill; full; 1000000                                                               # p=0.997, r=0.770, 1798, 3grams, 2015-08-12
 fills|makes full;fils|fractional monetary unit;10000000                           # p=0.999, r=0.519, 1000+999, 3grams, 2016-02-27
+fine; find; 100000000;                                                            # p=0.998, r=0.681, 967+945, 3grams, 2016-04-19
 finds|third person of 'find';fines|money penalties;10000000                       # p=1.000, r=0.610, 637+120, 3grams, 2015-12-10
 fir; for; 10000000                                                                # p=0.999, r=0.868, 998, 3grams, 2015-09-08
 fir; fur; 100                                                                     # p=1.000, r=0.804, 398, 3grams, 2015-09-08
@@ -337,11 +344,13 @@ peers|persons in a group;piers|wharfs, docks;10000                              
 phrase|sequence of words;frays|rubs, scratches;10000000                           # p=0.993, r=0.700, 995+79, 3grams, 2016-02-27
 picnic|outdoor social gathering;pyknic|having a squat and fleshy build;1000       # p=1.000, r=0.629, 997+6, 3grams, 2016-02-27
 pieced|joined the pieces of;piste|a ski run;10000000                              # p=1.000, r=0.556, 816+588, 3grams, 2016-02-27
+plan; plant; 100000;                                                              # p=0.998, r=0.440, 924+928, 3grams, 2016-04-11
 placed|past of verb 'place'; places|noun, third person verb; 1000000              # p=0.998, r=0.637, 986+987, 3grams, 2016-01-12
 plains|flat areas;planes|airplanes;10000                                          # p=0.990, r=0.554, 420+315, 3grams, 2015-12-10
 plain|simple;plane|airplane;100000                                                # p=0.997, r=0.541, 733+1000, 3grams, 2015-12-10
 pleaded|appealed;pleated|pleated into a ruffle;10000000                           # p=0.994, r=0.672, 1000+728, 3grams, 2016-02-27
 pleas|noun: requests;please|adverb used in polite request;10000000                # p=0.998, r=0.809, 61+930, 3grams, 2015-12-10
+pointed; pointer; 1000000;                                                        # p=1.000, r=0.757, 567+120, 3grams, 2016-04-11
 pole|a long (usually round) rod;poll|opinion poll;1000000                         # p=0.993, r=0.273, 976+998, 3grams, 2016-02-27
 poled|propel with a pole;polled|vote in an election or survey;10000000            # p=0.994, r=0.276, 124+1000, 3grams, 2016-02-27
 populace|the public;populous|densely populated;100000                             # p=1.000, r=0.790, 154+250, 3grams, 2015-12-10
@@ -411,6 +420,7 @@ sacred|holy;scared|frightened;1000                                              
 sails|used to propel a sailing vessel;sales|the activity of selling;10000         # p=0.996, r=0.741, 60+991, 3grams, 2015-12-11
 sail|used to propel a sailing vessel;sale|an instance of selling;1000000          # p=0.993, r=0.563, 299+993, 3grams, 2015-12-11
 same|identical; sane|mentally healthy; 10000                                      # p=1.000, r=0.962, 1028, 3grams, 2015-08-12
+same; some; 10000000;                                                             # p=1.000, r=0.868, 999+1000, 3grams, 2016-04-11
 saner|more sane, mentally healthier;seiner|boat for seine fishing;10000000        # p=0.995, r=0.505, 153+1000, 3grams, 2016-02-28
 sate; state; 100000000000                                                         # p=0.991, r=0.683, 1022, 3grams, 2015-08-24
 saver|someone who saves;savor|flavor, take pleasure in;1000000                    # p=0.994, r=0.375, 1000+335, 3grams, 2016-02-28

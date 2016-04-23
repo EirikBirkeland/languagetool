@@ -1,5 +1,7 @@
 # Words that extend the spell checker. See ignore.txt for words that should be
 # completely ignored (i.e. not used to create suggestions).
+# Hyphenated compound words containing words listed here will be accepted, too:
+# If this file contains "Au-pair", then "Au-pair-Agentur" will no longer be marked as incorrect.
 # Supported suffixes for German:
 # /E will add e
 # /S will add s
@@ -4137,3 +4139,69 @@ Profitrate/N
 Pfändungsbearbeitung
 formaliter
 prüffähig/A
+Kajal/S
+Dekolletébereich/S
+Dekolletébereiche/NS
+Feuerspucken
+Mainstreammedien
+ungestillt/A
+Broadway/S
+Präferenzmatrix
+Endoskopiesystem/ES
+Endoskopiesysteme/N
+serverbasiert/A
+Streaming/S
+Sternenkunde
+Partyzelt/ES
+Partyzelte/NS
+literaturgestützt/A
+produktivitätsorientiert/A
+wachstumsfähig/A
+potentialorientiert/A
+Spendeninfo/S
+Physisorption
+Sinnwidrigkeit
+Cineasmus
+Homestory/S
+Anmeldungsunterlagen
+spülmaschinengeeignet/A
+proverbial/A
+Unterbringungskonzept/ES
+Unterbringungskonzepte/NS
+Mittsechziger/SN
+Mittsiebziger/SN
+Mittachtziger/SN
+Mittneunziger/SN
+Mittsechzigerin
+Mittsechzigerinnen
+Mittsiebzigerin
+Mittsiebzigerinnen
+Mittachtzigerin
+Mittachtzigerinnen
+Mittneunzigerin
+Mittneunzigerinnen
+Sedierungstiefe/N
+Verleihgebühr
+Verleihgebühren
+thermomechanisch/A
+StA
+Selbstkundgabe/N
+Parabene
+Analgosedierung
+Delirmanagement/S
+analgetisch/A
+OpenThesaurus
+Veteranenrente
+Rehamaßnahme/N
+Shirtgröße/N
+Wohlfühlshirt/S
+Heileurythmist
+Heileurythmisten
+Heileurythmistin
+Heileurythmistinnen
+Häuslein
+Laxativum
+Laxativa
+Laxanzien
+Laxans
+Hackathon/S

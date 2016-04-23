@@ -1,4 +1,5 @@
 #Catalan multiwords file used for chunking
+'Ndrangheta	    _GN_FS
 All Blacks	_GN_MP
 Arizona Cardinals	_GN_MP
 Atlanta Falcons	_GN_MP
@@ -100,6 +101,7 @@ Bosanski Brod	NPCNG00
 Burger King	NPCNO00
 Bío Bío	NPCNG00
 Cagayan de Oro	NPCNG00
+Canet lo Roig	NPCNG00
 Cape Coast	NPCNG00
 Cargados Carajos	NPCNG00
 Carson City	NPCNG00
@@ -1027,6 +1029,8 @@ sine qua non	LOC_ADJ
 sobre manera	LOC_ADV
 sota capa d'	LOC_PREP
 sota capa de	LOC_PREP
+spaghetti western	_GN_MS
+spaghetti westerns	_GN_MP
 statu quo	_GN_MS
 stricto sensu	LOC_ADV
 sui generis	LOC_ADJ
