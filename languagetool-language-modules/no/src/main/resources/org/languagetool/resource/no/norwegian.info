@@ -1,0 +1,9 @@
+#
+# Dictionary properties.
+# These are target dictionary properties and don't pertain to the formatting of the plain text file input.
+#
+fsa.dict.separator=+
+# fsa.dict.encoding=iso-8859-1
+fsa.dict.encoding=utf8
+
+fsa.dict.encoder=SUFFIX
