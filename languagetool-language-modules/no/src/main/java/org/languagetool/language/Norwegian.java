@@ -32,8 +32,8 @@ import org.languagetool.languagemodel.LuceneLanguageModel;
 import org.languagetool.rules.*;
 import org.languagetool.rules.no.*;
 
-//import org.languagetool.tagging.Tagger;
-//import org.languagetool.tagging.no.NorwegianTagger;
+import org.languagetool.tagging.Tagger;
+import org.languagetool.tagging.no.NorwegianTagger;
 
 import org.languagetool.tagging.disambiguation.Disambiguator;
 import org.languagetool.tagging.disambiguation.rules.XmlRuleDisambiguator;
@@ -47,11 +47,11 @@ import org.languagetool.tokenizers.no.NorwegianWordTokenizer;
 
 public class Norwegian extends Language {
 
-  private LuceneLanguageModel languageModel;
-
+  private Tagger tagger; // included May 8th
   private SentenceTokenizer sentenceTokenizer;
   private WordTokenizer wordTokenizer;
-  
+  private LuceneLanguageModel languageModel;
+
   @Override // OK
   public SentenceTokenizer getSentenceTokenizer() {
     if (sentenceTokenizer == null) {
@@ -73,6 +73,14 @@ public class Norwegian extends Language {
   @Override
   public String[] getCountries() {
     return new String[]{};
+  }
+
+  @Override
+  public Tagger getTagger() {
+    if (tagger == null) {
+      tagger = new NorwegianTagger();
+    }
+    return tagger;
   }
 
   @Override
