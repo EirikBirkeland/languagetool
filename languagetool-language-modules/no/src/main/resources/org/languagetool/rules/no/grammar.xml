@@ -42,62 +42,69 @@ USA
 	<!-- ====================================================================== -->
 	<category id="TYPOS" name="Possible Typo" type="misspelling">
 
-		<rule id="WONT" name="wont (won't)">
+		<rule id="TEST1" name="tmp">
 			<pattern>
-				<marker>
-					<token>wont<exception scope="previous" postag="PRP$"/></token>
-				</marker>
-				<token><exception>to</exception></token>
+				<token regexp="yes" postag="NCMS00U" postag_regexp="yes">abbed</token>
 			</pattern>
-			<message>Please make sure you mean 'wont' (a habit), not <suggestion>won't</suggestion>/<suggestion>won’t</suggestion> (short for 'will not')?</message>
-			<example correction="won't|won’t">No, I <marker>wont</marker> do that.</example>
-			<example>We were wont to meet at that pleasant spot.</example>
-			<example>As is his wont, Tourneur shows us only parts of the set, in logical sequence, each at the moment when, and not before, we need to see it.</example>
+			<message>This is a message</message>
+			<example correction="yo">A fish jumped.</example>
 		</rule>
-		<!--
-		<rule id="WONT" name="wont (won't)">
-			<pattern>
-				<marker>
-					<token>wont<exception scope="previous" postag="PRP$"/></token>
-				</marker>
-				<token><exception>to</exception></token>
-			</pattern>
-			<message>Please make sure you mean 'wont' (a habit), not <suggestion>won't</suggestion>/<suggestion>won’t</suggestion> (short for 'will not')?</message>
-			<example correction="won't|won’t">No, I <marker>wont</marker> do that.</example>
-			<example>We were wont to meet at that pleasant spot.</example>
-			<example>As is his wont, Tourneur shows us only parts of the set, in logical sequence, each at the moment when, and not before, we need to see it.</example>
-		</rule>
-		-->
 
-<!---		(?<!en|ene|akkurat|nettopp)\s[md]ine?\s(?!egen|egne|tur)|(?<!et|akkurat|nettopp)\s[md]itt (?!eget|første)-->
-		
-		<rulegroup id="CORRUPTED_ENDINGS" name="-ene din; -en dine; etc.">
+		<rule id="ORD_GJENTAKELSE" name="tmp">
+			<pattern> <!-- Skal fjerne mange exceptions, når tagger virker korrekt, da de bliver fanget andetsteds -->
+				<token postag_regexp="yes"><exception postag="SENT_START"/>
+					<exception scope="previous">'</exception></token>
+				<and>
+					<token><match no="0"/><exception regexp="yes">ja</exception></token>
+					<token postag_regexp="yes" postag="sub:.*"><exception postag_regexp="yes" postag="sub:.*:gen"/></token>
+				</and>
+			</pattern>
+			<message>Ordgjentakelse: Du har gjentatt <suggestion>\1</suggestion>.</message>
+			<short>Ordgjentakelse</short>
+			<example correction="hunden">Nå har <marker>hunden hunden</marker> din gjort fra seg igjen!</example>
+		</rule>
+
+		<rulegroup id="TALL_BINDESTREKER" name="Ord, tal og bindestreger">
 			<rule>
 				<pattern>
-					<token regexp="yes">I|you|he|she|it|we|they</token>
-					<token regexp="yes">['’]</token>
-					<token regexp="yes">l</token>
+					<token regexp="yes">.*([0-9]|\.)</token>
+					<token regexp="yes">årig|års.*|tallet</token>
 				</pattern>
-				<message>Did you mean <suggestion>\1\2ll</suggestion>?</message>
-				<example correction="I'll">Yes, <marker>I'l</marker>.</example>
+				<message>Det mangler kanskje en bindestrek: <suggestion><match no="1"/>-<match no="2"/></suggestion>.</message>
+				<short>Bindestrek mangler kanskje</short>
+				<example correction="1700-tallet">På <marker>1700 tallet</marker> hadde man ikke fly.</example>
+				<example correction="30-års-krigen"><marker>30 års-krigen</marker> vartet i 30 år.</example>
+				<example correction="3-årig">Han er et <marker>3 årig</marker> barn.</example>
+				<example>Pesten herjet på 1300-tallet.</example>
+			</rule>
+		</rulegroup>
+		<!--------- continue here: https://github.com/languagetool-org/languagetool/blob/master/languagetool-language-modules/da/src/main/resources/org/languagetool/rules/da/grammar.xml ---------->
+		<rulegroup id="CORRUPTED_AFFIXES" name="-ene din; -en dine; etc.">
+			<!---		(?<!en|ene|akkurat|nettopp)\s[md]ine?\s(?!egen|egne|tur)|(?<!et|akkurat|nettopp)\s[md]itt (?!eget|første)-->
+			<rule>
+				<pattern>
+					<token regexp="yes" postag="NCMP000D" postag_regexp="yes">[a-åA-Å]+ene</token>
+					<token regexp="yes">(?:din|min|sin)[^e]</token>
+				</pattern>
+				<message>Did you mean <suggestion>\1\2e</suggestion>?</message>
+				<example correction="planene mine">abc<marker>c</marker>.</example>
 			</rule>
 			<rule>
-				<pattern>
-					<token regexp="yes">you|we|they</token>
-					<token regexp="yes">['’]</token>
-					<token regexp="yes">r|er</token>
+				<pattern><!-- postag="N*" postag_regexp="yes"-->
+					<token regexp="yes" postag="NCMS000D"/>
+					<token regexp="yes">(?:[dms]in)e</token>
 				</pattern>
-				<message>Did you mean <suggestion>\1\2re</suggestion>?</message>
-				<example correction="we're">Yes, <marker>we'r</marker> over here.</example>
+				<message>Did you mean <suggestion>\1e \2</suggestion>?</message>
+				<example correction="planen min">abc<marker>c</marker>.</example>
 			</rule>
+		</rulegroup>
+		<rulegroup id="HAN_HAM" name="han(s)/ham(do)">
 			<rule>
 				<pattern>
-					<token regexp="yes">I|you|we|they</token>
-					<token regexp="yes">['’]</token>
-					<token regexp="yes">v</token>
+					<token regexp="yes">han</token>
 				</pattern>
-				<message>Did you mean <suggestion>\1\2ve</suggestion>?</message>
-				<example correction="we've">Yes, <marker>we'v</marker> discussed that.</example>
+				<message>Did you mean <suggestion>\1 ham</suggestion>?</message>
+				<example correction="planene mine">abc<marker>c</marker>.</example>
 			</rule>
 		</rulegroup>
 	</category>
@@ -105,7 +112,9 @@ USA
 	<!-- ====================================================================== -->
 	<!-- Grammar -->
 	<!-- ====================================================================== -->
-	<category id="GRAMMAR" name="Grammar" type="grammar"></category>
+	<category id="GRAMMAR" name="Grammar" type="grammar">
+
+	</category>
 	<!-- ====================================================================== -->
 	<!-- Collocations -->
 	<!-- ====================================================================== -->
