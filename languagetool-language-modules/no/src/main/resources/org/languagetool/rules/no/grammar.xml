@@ -30,7 +30,7 @@ USA
 
 <!DOCTYPE rules [
 <!ENTITY weekdays "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag">
-<!ENTITY abbrevWeekdays "Mon|Mo|Tue|Tu|Wed|We|Thu|Th|Fri|Fr|Sat|Sa|Sun|Su">
+<!ENTITY abbrevWeekdays "man|tir|ons|tor|fre|lør|søn">
 <!ENTITY months "januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember">
 <!ENTITY abbrevMonths "jan|beb|mar|apr|jun|jul|aug|sep|okt|nov|des">
 ]>
