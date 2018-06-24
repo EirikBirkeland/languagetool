@@ -8,7 +8,7 @@ See tagset.txt for the meaning of the POS tags
 Copyright (C) 2001-2015 Daniel Naber (http://www.danielnaber.de),
   Marcin Miłkowski and the LanguageTool contributors
 
-Portions of rules are converted from After The Deadline grammar checker, 
+Portions of rules are converted from After The Deadline grammar checker,
 available at http://open.afterthedeadline.com/, licensed under
 GNU GPL.
 
@@ -29,10 +29,10 @@ USA
 -->
 
 <!DOCTYPE rules [
-<!ENTITY weekdays "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday">
+<!ENTITY weekdays "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag">
 <!ENTITY abbrevWeekdays "Mon|Mo|Tue|Tu|Wed|We|Thu|Th|Fri|Fr|Sat|Sa|Sun|Su">
-<!ENTITY months "January|February|March|April|May|June|July|August|September|October|November|December">
-<!ENTITY abbrevMonths "Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec">
+<!ENTITY months "januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember">
+<!ENTITY abbrevMonths "jan|beb|mar|apr|jun|jul|aug|sep|okt|nov|des">
 ]>
 
 <rules lang="en" xsi:noNamespaceSchemaLocation="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -46,8 +46,8 @@ USA
 			<pattern>
 				<token regexp="yes" postag="NCMS00U" postag_regexp="yes">abbed</token>
 			</pattern>
-			<message>This is a message</message>
-			<example correction="yo">A fish jumped.</example>
+			<message>Dette er en melding</message>
+			<example correction="yo">en fisk hoppet.</example>
 		</rule>
 
 		<rule id="ORD_GJENTAKELSE" name="tmp">
@@ -72,9 +72,9 @@ USA
 				</pattern>
 				<message>Det mangler kanskje en bindestrek: <suggestion><match no="1"/>-<match no="2"/></suggestion>.</message>
 				<short>Bindestrek mangler kanskje</short>
-				<example correction="1700-tallet">På <marker>1700 tallet</marker> hadde man ikke fly.</example>
-				<example correction="30-års-krigen"><marker>30 års-krigen</marker> vartet i 30 år.</example>
-				<example correction="3-årig">Han er et <marker>3 årig</marker> barn.</example>
+				<example correction="1700-tallet">På <marker>1700-tallet</marker> hadde man ikke fly.</example>
+				<example correction="30-års-krigen"><marker>30 års-krigen</marker> varte i 30 år.</example>
+				<example correction="3-årig">Han er et <marker>3-årig</marker> barn.</example>
 				<example>Pesten herjet på 1300-tallet.</example>
 			</rule>
 		</rulegroup>

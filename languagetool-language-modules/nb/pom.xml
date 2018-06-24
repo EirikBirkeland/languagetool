@@ -8,9 +8,9 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
     
-    <artifactId>language-no</artifactId>
+    <artifactId>language-nb</artifactId>
     <url>http://www.languagetool.org</url>
-    <name>Norwegian module for LanguageTool</name>
+    <name>Norwegian Bokmål module for LanguageTool</name>
 
     <licenses>
         <license>
